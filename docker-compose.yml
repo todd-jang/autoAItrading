@@ -1,7 +1,7 @@
 # docker-compose.yml
 # 이 파일은 백엔드와 프런트엔드 컨테이너를 함께 관리하는 멀티 컨테이너 설정을 정의합니다.
 
-version: '3.8'
+version: '3.7'
 
 services:
   # 백엔드 서비스
@@ -19,7 +19,7 @@ services:
     build:
       context: ./frontend # frontend 폴더 내의 Dockerfile을 사용하여 이미지를 빌드합니다.
     ports:
-      - "3000:3000" # Vite의 개발 서버 포트를 매핑합니다.
+      - "3001:3000" # Vite의 개발 서버 포트를 매핑합니다.
     volumes:
       - ./frontend:/app # 호스트의 frontend 폴더를 컨테이너의 /app 디렉토리와 동기화합니다.
     depends_on:
